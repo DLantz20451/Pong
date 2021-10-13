@@ -71,13 +71,13 @@ public class ball extends Actor
         }
         if (getX() >= 565 && (isTouching(Paddle.class)))
         {
-            dX = 7;
+            dX = -10;
             move();
-            dX = 4;
+            dX = -4;
         }
         if (getX() <= 35 && (isTouching(Paddle.class)))
         {
-            dX = -7;
+            dX = 10;
             move();
             dX = 4;
         }
