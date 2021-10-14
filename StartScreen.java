@@ -18,14 +18,15 @@ public class StartScreen extends Actor
     {
         delayTimer++;
         setLocation(300, 250);
+        spawnThenGone();
     }
     
     /**
-     * how the pong ball moves
+     * Our StartScreen
      */
     public void spawnThenGone()
     {
-        if(delayTimer >= 35)
+        if(delayTimer >= 60)
         {
           getWorld().removeObject(this);
           delayTimer = 0;

@@ -39,7 +39,7 @@ public class ball extends Actor
      */
     public void move()
     {
-        if(delayTimer >= 100)
+        if(delayTimer >= 125)
         {
             setLocation(getX() + dX,getY() + dY);
         }
@@ -69,13 +69,13 @@ public class ball extends Actor
             Greenfoot.playSound("Blip_Select9.wav");
             
         }
-        if (getX() >= 565 && (isTouching(Paddle.class)))
+        if (getX() >= 555 && (isTouching(Paddle.class)))
         {
             dX = -10;
             move();
             dX = -4;
         }
-        if (getX() <= 35 && (isTouching(Paddle.class)))
+        if (getX() <= 45 && (isTouching(Paddle.class)))
         {
             dX = 10;
             move();
@@ -99,18 +99,6 @@ public class ball extends Actor
             dX = 10;
             move();
             dX = 4;
-        }
-    }
-    
-    /**
-     * our temp startscreen
-     */
-    public void startScreen()
-    {
-        if (delayTimer >= 40)
-        {
-            getWorld().setBackground(new GreenfootImage("Start.png"));
-            setLocation(getX() + dX,getY() + dY);
         }
     }
     
@@ -139,7 +127,6 @@ public class ball extends Actor
           counter2.add(1);
         }
     }
-    
     
     /**
      * Checcks for win and plays Winner theme

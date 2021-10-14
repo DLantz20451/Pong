@@ -45,8 +45,8 @@ public class MyWorld extends World
 
         ball.setLocation(297,249);
 
-        //StartScreen startScreen = new StartScreen();
-        //addObject(startScreen,getWidth()/2,getHeight()/2);
+        StartScreen startScreen = new StartScreen();
+        addObject(startScreen,getWidth()/2,getHeight()/2);
         
     }
     
