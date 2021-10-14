@@ -84,6 +84,25 @@ public class ball extends Actor
     }
     
     /**
+     * how to stop our ball from being stuck in the paddle
+     */
+    public void checkForCollision()
+    {
+        if (delayTimer >= 10 && (isTouching(Paddle.class)))
+        {
+            dX = -10;
+            move();
+            dX = -4;
+        }
+        if (delayTimer >= 10 && (isTouching(Paddle.class)))
+        {
+            dX = 10;
+            move();
+            dX = 4;
+        }
+    }
+    
+    /**
      * our temp startscreen
      */
     public void startScreen()
